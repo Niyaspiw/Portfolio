@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jaspher C. Ginez | Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== SPLASH SCREEN ===== -->
+  <div id="splash" class="splash">
+    <div class="splash-content">
+      <div class="splash-avatar">
+        <img src="assets/dork.jpg" alt="Profile" />
+      </div>
+      <h1 class="splash-title">Jaspher C. Ginez</h1>
+      <p class="splash-sub">Welcome to my portfolio</p>
+      <button id="enterBtn" class="btn primary splash-btn">🎧 Enter</button>
+      <p class="splash-note">Best experienced with sound on 🔊</p>
+    </div>
+  </div>
+
+  <!-- ===== TOP CONTROLS ===== -->
+  <div class="top-controls">
+    <button id="langToggle" class="ctrl-btn" title="Change Language">🌐 EN</button>
+    <button id="themeToggle" class="ctrl-btn" title="Toggle Theme">🌙</button>
+    <div class="music-control">
+      <button id="musicToggle" class="ctrl-btn" title="Play/Pause">▶️</button>
+      <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.3" />
+    </div>
+  </div>
+
+  <!-- ===== HERO / ABOUT ===== -->
+  <header class="hero">
+    <img id="pfp" src="assets/dork.jpg" alt="Profile Picture" class="pfp" />
+    <h1 id="nameText">Jaspher C. Ginez</h1>
+    <p id="roleText" class="subtitle">Aspiring Developer · Java · Python · SQL</p>
+
+    <div class="hero-buttons">
+      <a href="assets/jaspher-cv.pdf" download class="btn primary" id="cvBtn">📄 Download CV</a>
+      <a href="#contact" class="btn ghost" id="contactBtn">📬 Contact Me</a>
+    </div>
+  </header>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="section" id="projects">
+    <h2 id="projectsTitle">Projects</h2>
+    <div class="projects-grid">
+
+      <article class="project-card">
+        <div class="project-header">
+          <h3>Apartease</h3>
+          <span class="project-icon">&lt;/&gt;</span>
+        </div>
+        <p class="project-context">Apartment Rental Management System · Academic</p>
+        <p class="project-role">Lead Developer · Sept 2025 – Dec 2025</p>
+        <ul class="project-bullets">
+          <li>Desktop application for apartment rental management</li>
+          <li>Led a team to design and build a full CRUD system</li>
+          <li>Handled tenant records, billing, and rental tracking</li>
+        </ul>
+        <div class="project-tech">
+          <span class="tech-label">Tech:</span>
+          <span>C#, .NET, SQL</span>
+        </div>
+        <a href="https://drive.google.com/file/d/15gmtON_1CI3G5rlYPrlY3FK8ZYbjgtkx/view?usp=sharing"
+           target="_blank" class="btn primary project-btn">View Project</a>
+      </article>
+
+      <article class="project-card">
+        <div class="project-header">
+          <h3>Wine Quality Prediction</h3>
+          <span class="project-icon">&lt;/&gt;</span>
+        </div>
+        <p class="project-context">Machine Learning Web Application · Academic</p>
+        <p class="project-role">Solo Developer · 2025</p>
+        <ul class="project-bullets">
+          <li>ML model predicting wine quality using scikit-learn</li>
+          <li>Deployed with Flask + Gunicorn, hosted on Render</li>
+          <li>Integrated Gemini AI chatbot for user assistance</li>
+          <li>Rate-limited API, environment variables for secrets</li>
+        </ul>
+        <div class="project-tech">
+          <span class="tech-label">Tech:</span>
+          <span>Python, Flask, scikit-learn, pandas, NumPy, Gemini API</span>
+        </div>
+        <a href="https://final-project-ia5m.onrender.com"
+           target="_blank" class="btn primary project-btn">Live Demo</a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section class="section" id="education">
+    <h2 id="eduTitle">Education</h2>
+    <div class="education-list">
+
+      <div class="edu-card">
+        <div class="edu-header">
+          <h3>Philippine Christian University</h3>
+          <span class="edu-date">2023 – Present</span>
+        </div>
+        <p class="edu-degree">Bachelor of Science in Information Technology</p>
+      </div>
+
+      <div class="edu-card">
+        <div class="edu-header">
+          <h3>Jesus Reigns Christian Academy</h3>
+          <span class="edu-date">2021 – 2023</span>
+        </div>
+        <p class="edu-degree">Science, Technology, Engineering, and Mathematics (STEM)</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section" id="skills">
+    <h2 id="skillsTitle">Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card"><h3>Proficient</h3><p>Java · Python · SQL</p></div>
+      <div class="skill-card"><h3>Familiar</h3><p>HTML · CSS · JavaScript · C#</p></div>
+      <div class="skill-card"><h3>Tools</h3><p>Git · GitHub · Flask · scikit-learn</p></div>
+    </div>
+  </section>
+
+  <!-- ===== CERTIFICATIONS ===== -->
+  <section class="section" id="certifications">
+    <h2 id="certsTitle">Certifications</h2>
+    <div class="certs-grid">
+
+      <div class="cert-card">
+        <img src="assets/build-the-future.jpg" alt="Building the Future certificate" />
+        <p>Building the Future: Real-world Tools for IT and CS Students<br><small>Philippine Christian University · 2025</small></p>
+        <a href="assets/build-the-future.jpg" target="_blank" class="btn ghost">View</a>
+      </div>
+
+      <div class="cert-card">
+        <img src="assets/advancing-automation.jpg" alt="Advancing Automation certificate" />
+        <p>Advancing Automation and Sustainability<br><small>Philippine Christian University · 2025</small></p>
+        <a href="assets/advancing-automation.pdf" target="_blank" class="btn ghost">View PDF</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section" id="contact">
+    <h2 id="contactTitle">You can contact me here</h2>
+
+    <div class="contact-wrap">
+      <div class="contact-buttons">
+        <a href="https://github.com/Niyaspiw" target="_blank" class="btn contact github">GitHub</a>
+        <a href="https://www.linkedin.com/in/i-am-jaspher-ginez/" target="_blank" class="btn contact linkedin">LinkedIn</a>
+        <a href="mailto:ginezjaspher19@gmail.com?subject=Portfolio%20Inquiry%20-%20%5BYour%20Name%5D&body=Hi%20Jaspher%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20connect.%0A%0AName%3A%20%0ACompany%2FSchool%3A%20%0APurpose%3A%20%0A%0AThank%20you!"
+           class="btn contact email">Email</a>
+      </div>
+
+      <p class="email-text">
+        <span>Niyaspiw</span>
+        <span class="divider">|</span>
+        <span>Jaspher Ginez</span>
+        <span class="divider">|</span>
+        <a href="mailto:ginezjaspher19@gmail.com?subject=Portfolio%20Inquiry">ginezjaspher19@gmail.com</a>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Jaspher C. Ginez</p>
+  </footer>
+
+  <audio id="bgMusic" src="assets/rick-astley.mp3" loop></audio>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
