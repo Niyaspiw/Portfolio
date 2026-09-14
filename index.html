@@ -74,7 +74,7 @@
           <span class="project-icon">&lt;/&gt;</span>
         </div>
         <p class="project-context">Machine Learning Web Application · Academic</p>
-        <p class="project-role">Solo Developer · 2025</p>
+        <p class="project-role">Solo Developer · 2026</p>
         <ul class="project-bullets">
           <li>ML model predicting wine quality using scikit-learn</li>
           <li>Deployed with Flask + Gunicorn, hosted on Render</li>
@@ -174,6 +174,43 @@
 
   <audio id="bgMusic" src="assets/rick-astley.mp3" loop></audio>
 
+    <!-- ===== CHATBOT WIDGET ===== -->
+  <button id="chatToggle" class="chat-toggle" aria-label="Open chat">💬</button>
+
+  <div id="chatWindow" class="chat-window" aria-hidden="true">
+    <div class="chat-header">
+      <div class="chat-header-info">
+        <span class="chat-avatar">🤖</span>
+        <div>
+          <h4>BIYEKSBI</h4>
+          <p>Jaspher's AI Assistant</p>
+        </div>
+      </div>
+      <button id="chatClose" class="chat-close" aria-label="Close chat">✕</button>
+    </div>
+
+    <div id="chatMessages" class="chat-messages">
+      <div class="chat-message bot">
+        <div class="chat-bubble">
+          Hi! I'm <strong>BIYEKSBI</strong> 🤖 — ask me anything about Jaspher's projects, skills, education, or certifications!
+        </div>
+      </div>
+    </div>
+
+    <form id="chatForm" class="chat-input-area">
+      <input
+        type="text"
+        id="chatInput"
+        class="chat-input"
+        placeholder="Ask me anything..."
+        autocomplete="off"
+        maxlength="1000"
+      />
+      <button type="submit" id="chatSend" class="chat-send" aria-label="Send">📤</button>
+    </form>
+  </div>
+
   <script src="js/script.js"></script>
+  <script src="js/chatbot.js"></script>
 </body>
 </html>
