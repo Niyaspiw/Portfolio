@@ -907,3 +907,27 @@ footer {
     right: 1rem;
   }
 }
+
+/* ===== CHAT MARKDOWN FORMATTING ===== */
+.chat-bubble strong {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.chat-bubble em {
+  font-style: italic;
+}
+
+.chat-bubble code {
+  background: rgba(96, 165, 250, 0.15);
+  color: var(--primary);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.85em;
+}
+
+.chat-message.user .chat-bubble code {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
