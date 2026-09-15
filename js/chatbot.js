@@ -86,7 +86,21 @@ function formatBotMessage(rawText) {
   // 4. Convert `code` → <code>
   text = text.replace(/`([^`\n]+?)`/g, "<code>$1</code>");
 
-  // 5. Convert newlines to <br>
+  // 5. Auto-convert URLs to clickable links
+  //    Matches http:// and https:// URLs
+  text = text.replace(
+    /(https?:\/\/[^\s<]+)/g,
+    '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>'
+  );
+
+  // 6. Auto-convert email addresses to mailto: links
+  //    Only matches emails that are NOT already inside href=""
+  text = text.replace(
+    /(?<!["'>])([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})(?!["<])/g,
+    '<a href="mailto:$1">$1</a>'
+  );
+
+  // 7. Convert newlines to <br>
   text = text.replace(/\n/g, "<br>");
 
   return text;
