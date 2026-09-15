@@ -51,11 +51,45 @@ function addMessage(text, sender = "bot") {
 
   const bubble = document.createElement("div");
   bubble.classList.add("chat-bubble");
-  bubble.textContent = text;
+
+  if (sender === "bot") {
+    // Render bot messages with safe markdown support
+    bubble.innerHTML = formatBotMessage(text);
+  } else {
+    // User messages stay as plain text (safer)
+    bubble.textContent = text;
+  }
 
   wrapper.appendChild(bubble);
   chatMessages.appendChild(wrapper);
   scrollToBottom();
+}
+
+// ============================================================
+// SAFE MARKDOWN FORMATTER
+// Converts **bold**, *italic*, `code`, and newlines into HTML
+// Only used for bot messages — safely escapes HTML first
+// ============================================================
+function formatBotMessage(rawText) {
+  // 1. Escape HTML so no scripts/HTML can be injected
+  let text = rawText
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+
+  // 2. Convert **bold** → <strong>
+  text = text.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+
+  // 3. Convert *italic* → <em> (but not already-converted **)
+  text = text.replace(/(?<!\*)\*([^*\n]+?)\*(?!\*)/g, "<em>$1</em>");
+
+  // 4. Convert `code` → <code>
+  text = text.replace(/`([^`\n]+?)`/g, "<code>$1</code>");
+
+  // 5. Convert newlines to <br>
+  text = text.replace(/\n/g, "<br>");
+
+  return text;
 }
 
 function addTypingIndicator(label = "") {
