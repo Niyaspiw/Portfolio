@@ -793,7 +793,7 @@ footer {
   font-size: 0.9rem;
   line-height: 1.5;
   word-wrap: break-word;
-  white-space: pre-wrap;
+  white-space: normal;   
 }
 
 .chat-message.bot .chat-bubble {
